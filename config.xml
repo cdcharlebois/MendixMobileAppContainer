@@ -191,6 +191,6 @@
         </platform>
 
     <splash src="splash.png" />
-
+	<plugin name="adobe-mobile-services" source="npm"/>
 
 </widget>

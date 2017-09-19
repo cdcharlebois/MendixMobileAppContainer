@@ -194,6 +194,6 @@
 	<plugin name="adobe-mobile-services" source="npm"/>
 	
 	<!-- Health plugin -->
-<plugin name="cordova-plugin-health" source="npm">
+<plugin name="cordova-plugin-health" source="npm"/>
 
 </widget>

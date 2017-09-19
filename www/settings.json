@@ -1,10 +1,10 @@
 {
-  "url": "http://tieniber.ddns.net:8080/",
-  "hybridTabletProfile": "",
-  "hybridPhoneProfile": "",
-  "enableOffline": true,
-  "persistentSession": {
-	  "enabled":true,
-	  "forceSecurity":true
-	}
+    "url": "https://johnhancock100.mxapps.io",
+    "hybridTabletProfile": "",
+    "hybridPhoneProfile": "",
+    "enableOffline": true,
+    "persistentSession": {
+        "enabled": true,
+        "forceSecurity": true
+    }
 }

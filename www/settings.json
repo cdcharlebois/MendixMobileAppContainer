@@ -2,9 +2,6 @@
     "url": "https://johnhancock100.mxapps.io",
     "hybridTabletProfile": "",
     "hybridPhoneProfile": "",
-    "enableOffline": true,
-    "persistentSession": {
-        "enabled": true,
-        "forceSecurity": true
-    }
+    "enableOffline": false,
+    "requirePin": false
 }

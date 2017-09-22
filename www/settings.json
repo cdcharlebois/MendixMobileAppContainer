@@ -1,9 +1,10 @@
 {
-  "url": "https://SAP-Sphero-Game-MXSPHERO.cfapps.us10.hana.ondemand.com",
-  "hybridTabletProfile": "",
-  "hybridPhoneProfile": "",
-  "enableOffline": false,
-  "requirePin": false,
-  "username": "",
-  "password": ""
+    // Change
+    "url": "https://sapspherogamebacku.mxapps.io",
+    "hybridTabletProfile": "",
+    "hybridPhoneProfile": "",
+    "enableOffline": false,
+    "requirePin": false,
+    "username": "",
+    "password": ""
 }

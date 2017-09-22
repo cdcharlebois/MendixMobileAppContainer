@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <widget xmlns = "http://www.w3.org/ns/widgets"
         xmlns:gap = "http://phonegap.com/ns/1.0"
-        id        = "io.mxapps.sapspherogame"
+        id        = "io.mxapps.sapspherogamebackup"
         version   = "0.0.4" >
 
-    <name>SAP Sphero Game</name>
+    <name>SAP Sphero Game (Mendix Cloud)</name>
 
     <description></description>
 

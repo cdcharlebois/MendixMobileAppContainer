@@ -1,9 +1,9 @@
 {
-    "url": "https://sapspherogamebacku.mxapps.io",
-    "hybridTabletProfile": "",
-    "hybridPhoneProfile": "",
-    "enableOffline": false,
-    "requirePin": false,
-    "username": "",
-    "password": ""
+  "url": "https://sapspherogamebacku.mxapps.io",
+  "hybridTabletProfile": "",
+  "hybridPhoneProfile": "",
+  "enableOffline": false,
+  "requirePin": false,
+  "username": "",
+  "password": ""
 }

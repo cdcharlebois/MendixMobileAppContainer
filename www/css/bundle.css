@@ -1,3 +1,131 @@
+/* Custom CSS goes here */
+.loading{
+	background: #00649d; /* For browsers that do not support gradients */
+	background: -webkit-linear-gradient(-35deg, #629fd5, #00649d); /* For Safari 5.1 to 6.0 */
+	background: -o-linear-gradient(-35deg, #629fd5, #00649d); /* For Opera 11.1 to 12.0 */
+	background: -moz-linear-gradient(-35deg, #629fd5, #00649d); /* For Firefox 3.6 to 15 */
+	background: linear-gradient(-35deg, #629fd5, #00649d); /* Standard syntax */
+}
+
+.loader {
+  height: 2vh;
+  width: 100%;
+  position: relative;
+  overflow: hidden;
+  background-color: #629fd5;
+}
+.loader:before{
+  display: block;
+  position: absolute;
+  content: "";
+  right: 0;
+  height: 2vh;
+  background-color: #00649d;
+  animation: loading 7s linear infinite;
+}
+
+@keyframes loading {
+	0% { width: 100%;}
+	20% { width: 100%; }
+    100% { width: 0%;}
+}
+
+@keyframes slidy {
+	0% { transform: translateX(0%); }
+	25% { transform: translateX(-20%); }
+	50% { transform: translateX(-40%); }
+	75% { transform: translateX(-60%); }
+	100% { transform: translateX(-80%); }
+}
+
+* {
+  box-sizing: border-box;
+}
+
+div.slider-item {
+  margin: 0;
+  height: 100%;
+  overflow: hidden;
+
+}
+
+div.slider {
+	height: 98vh;
+	position: relative;
+	width: 500%;
+	font-size: 0;
+	animation: 28s slidy infinite 7s;
+	animation-direction: initial;
+}
+div.slider div.slider-item {
+  width: 20%;
+  height: 100%;
+  display: inline-block;
+  position: inherit;
+}
+div.slider img {
+	position: absolute;
+    bottom: 35vh;
+	//width: 100vw;
+	//border-left: 23vw solid transparent;
+	//border-right: 23vw solid transparent;
+	height: 50vh;
+	width:60vw;
+	margin-left:50px;
+}
+
+div.slider div.slider-item figcaption {
+  position: absolute;
+  height: 35vh;
+  border: 0;
+  //border-top: 2px solid #5B9BD5;
+  bottom: 0;
+  color: #fff;
+  width: 100%;
+  padding: 0 40px;
+  font-family: "central_sans",Helvetica,"special";
+}
+div.slider-item figcaption h3{
+	font-size: 18px;
+	line-height: 18px;
+	margin: 20px 0;
+}
+div.slider-item figcaption p{
+	font-weight: 100;
+	font-size: 14px;
+	line-height: 14px;
+	margin: 0;
+}
+
+
+div#load-first {
+  width: 100%;
+  height: 100vh;
+}
+
+
+div#load-sub, div#load-first{
+    display: none;
+}
+
+#mx-loader-container{
+    overflow: hidden;
+}
+
+.mx-message{
+	font-family: "central_sans",Helvetica,"special";
+	font-size: 18px;
+  top: 20px;
+  position: absolute;
+  left: 0;
+  right: 0;
+  margin-left: auto;
+  margin-right: auto;
+  width: 300px;
+  text-align: center;
+  line-height: 29px;
+  color: white;
+}
 body {
     margin: 0;
     font-family: helvetica, arial, sans-serif;
@@ -72,7 +200,7 @@ body {
 .mx-loader .mx-message {
     text-align: center;
     padding: 4px 0;
-}/* Reset
+}/* Reset 
 /*******************/
 * {
     box-sizing: border-box;
@@ -121,7 +249,7 @@ button, input, select, textarea {
     }
 }
 
-/* Login
+/* Login 
 /*******************/
 
 .mx-hybridapp {
@@ -264,81 +392,4 @@ button, input, select, textarea {
     border-style: none;
     color: #0595db;
     background: none;
-}
-/*# sourceMappingURL=bundle.css.map*/
-
-@keyframes svg-rotate {
-  to {
-	transform: rotate(360deg);
-  }
-}
-@keyframes stroke-width {
-  0%, 100% {
-	stroke-width: 0;
-  }
-  45%, 55% {
-	stroke-width: 2;
-  }
-  50% {
-	stroke-width: 4;
-  }
-}
-@keyframes stroke-dash {
-  0% {
-	stroke-dasharray: 0, 301.59289;
-	stroke-dashoffset: 0;
-  }
-  50% {
-	stroke-dasharray: 301.59289, 0;
-	stroke-dashoffset: 0;
-  }
-  100% {
-	stroke-dasharray: 301.59289, 301.59289;
-	stroke-dashoffset: -301.59289;
-  }
-}
-@keyframes stroke-color {
-  from {
-	stroke: #1880b9;
-  }
-  to {
-	stroke: white;
-  }
-}
-#loading svg{
-	position: relative;
-	left: 50%;
-	transform: translateX(-50%);
-}
-
-.m-modeler-loader {
-  position: relative;
-  -webkit-transition: all 0.4s ease-in-out;
-  transition: all 0.4s ease-in-out;
-}
-
-.m-modeler-loader .m-modeler-loader-spinner .svg {
-  position: absolute;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  margin: auto auto;
-  display: block;
-  animation: svg-rotate 8000ms linear infinite;
-}
-
-/* IE 10 and above */
-_:-ms-lang(x), .m-modeler-loader .m-modeler-loader-spinner .svg {
-  animation: svg-rotate 2000ms linear infinite;
-}
-
-.m-modeler-loader .m-modeler-loader-spinner circle {
-  fill: transparent;
-  stroke: #1880b9;
-  stroke-width: 4;
-  stroke-linecap: round;
-  stroke-dasharray: 300, 100;
-  stroke-dashoffset: 50;
-  animation: stroke-dash 2000ms linear infinite, stroke-width 2000ms linear infinite, stroke-color 8000ms steps(4) infinite;
 }

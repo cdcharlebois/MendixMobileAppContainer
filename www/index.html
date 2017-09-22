@@ -2,74 +2,145 @@
 <html>
 
 <head>
-	<meta charset="utf-8">
-	<title>Mendix App</title>
-	<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1, maximum-scale=1">
-	<meta name="format-detection" content="telephone=no">
-	<meta name="msapplication-tap-highlight" content="no">
-	<link href="../www/css/bundle.css" rel="stylesheet">
-</head>
+    <meta charset="utf-8">
+    <title>Mendix App</title>
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1, maximum-scale=1">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="msapplication-tap-highlight" content="no">
+    <style>
+        @font-face {
+            font-family: 'philipscustom';
+            src: url('./img/fonts/philipscustom.eot?o1tli3');
+            src: url('./img/fonts/philipscustom.eot?o1tli3#iefix') format('embedded-opentype'),
+            url('./img/fonts/philipscustom.ttf?o1tli3') format('truetype'),
+            url('./img/fonts/philipscustom.woff?o1tli3') format('woff'),
+            url('./img/fonts/philipscustom.svg?o1tli3#philipscustom') format('svg');
+            font-weight: normal;
+            font-style: normal;
+        }
+
+        @font-face {
+            font-family: 'central_sans';
+            src: url('./img/fonts/CentraleSans-XLight-webfont.eot');
+            src: url('./img/fonts/CentraleSans-XLight-webfont.eot?#iefix') format('embedded-opentype'), url('./img/fonts/CentraleSans-XLight-webfont.woff') format('woff'), url('./img/fonts/CentraleSans-XLight-webfont.ttf') format('truetype'), url('./img/fonts/CentraleSans-XLight-webfont.svg#centrale_sans_xlightregular') format('svg');
+            font-weight: 100;
+            font-style: normal;
+        }
+
+        @font-face {
+            font-family: 'central_sans';
+            src: url('./img/fonts/CentraleSans-Regular-webfont.eot');
+            src: url('./img/fonts/CentraleSans-Regular-webfont.eot?#iefix') format('embedded-opentype'), url('./img/fonts/CentraleSans-Regular-webfont.woff') format('woff'), url('./img/fonts/CentraleSans-Regular-webfont.ttf') format('truetype'), url('./img/fonts/CentraleSans-Regular-webfont.svg#centrale_sans_regularregular') format('svg');
+            font-weight: normal;
+            font-style: normal;
+        }
+
+        @font-face {
+            font-family: 'central_sans';
+            src: url('./img/fonts/CentraleSans-Medium-webfont.eot');
+            src: url('./img/fonts/CentraleSans-Medium-webfont.eot?#iefix') format('embedded-opentype'), url('./img/fonts/CentraleSans-Medium-webfont.woff') format('woff'), url('./img/fonts/CentraleSans-Medium-webfont.ttf') format('truetype'), url('./img/fonts/CentraleSans-Medium-webfont.svg#centrale_sans_mediumregular') format('svg');
+            font-weight: bold;
+            font-style: normal;
+        }
+
+        @font-face {
+            font-family: 'Arial';
+            font-weight: 100;
+            font-style: normal;
+        }
+
+        @font-face {
+            font-family: 'special';
+            src: url('./img/fonts/Lato-Light.woff');
+            font-weight: 100;
+            font-style: normal;
+        }
+
+        @font-face {
+            font-family: 'special';
+            src: url('./img/fonts/Lato-Medium.woff');
+            font-weight: normal;
+            font-style: normal;
+        }
+
+        @font-face {
+            font-family: 'special';
+            src: url('./img/fonts/Lato-Bold.woff');
+            font-weight: bold;
+            font-style: normal;
+        }
+    </style>
+<link href="../www/css/bundle.css" rel="stylesheet"></head>
 
 <body dir="ltr" class="mx-hybridapp">
-	<div id="content"></div>
+    <div id="content"></div>
 
-	<div id="mx-app" class="mx-main-container">
-		<div id="mxalert" class="mx-alert">
-			<div class="mx-alert-header">
-				<h4>Error</h4>
-			</div>
-			<div class="mx-alert-body">
-				<p id="mxalert_message"></p>
-			</div>
-			<div class="mx-alert-footer">
-				<button id="mxalert_button" type="button">OK</button>
-			</div>
-		</div>
+    <div id="mx-app" class="mx-main-container">
+        <div id="mxalert" class="mx-alert">
+            <div class="mx-alert-header">
+                <h4>Error</h4>
+            </div>
+            <div class="mx-alert-body">
+                <p id="mxalert_message"></p>
+            </div>
+            <div class="mx-alert-footer">
+                <button id="mxalert_button" type="button">OK</button>
+            </div>
+        </div>
 
-		<div id="mx-loader-container" class="mx-valign-table">
-			<div class="mx-valign-cell">
-				<div class="mx-loader">
-					<div id="loading">
-						<div id="modeler-base-loader" class="m-modeler-loader">
-							<div class="m-modeler-loader-spinner"> <svg class 'svg'="" width="200" height="200"> <circle cx="100" cy="100" r="50"></circle> </svg></div>
-						</div>
-					</div>
-					<div class="mx-message"></div>
-				</div>
-			</div>
-		</div>
-	</div>
+        <div id="mx-loader-container" class="mx-valign-table loading">
+            <div class="mx-message">Loading...</div>
 
-	<div id="mx-login-container" class="mx-hybridapp-wrapper">
-		<div class="mx-hybridapp-login">
-			<div id="mx-login-error" class="mx-hybridapp-title">Sign in</div>
-			<div class="mx-hybridapp-formgroup">
-				<input id="mx-username" class="mx-hybridapp-formgroup-input" type="text" autocorrect="off" autocapitalize="none" placeholder="User name">
-				<input id="mx-password" class="mx-hybridapp-formgroup-input" type="password" autocorrect="off" autocapitalize="none" placeholder="Password">
-			</div>
-			<button id="mx-execute-login" class="mx-hybridapp-button">Sign in</button>
-		</div>
-	</div>
+            <div id="load-sub">
+            </div>
 
-	<div id="mx-pin-container" class="mx-hybridapp-wrapper">
-		<div class="mx-hybridapp-login">
-			<div id="mx-pin-error" class="mx-hybridapp-title"></div>
+            <div id="load-first">
 
-			<div class="mx-hybridapp-formgroup mx-hybridapp-formgroup-pins">
-				<input class="mx-hybridapp-formgroup-input" type="password" autocorrect="off" autocapitalize="none" maxlength="1">
-				<input class="mx-hybridapp-formgroup-input" type="password" autocorrect="off" autocapitalize="none" maxlength="1">
-				<input class="mx-hybridapp-formgroup-input" type="password" autocorrect="off" autocapitalize="none" maxlength="1">
-				<input class="mx-hybridapp-formgroup-input" type="password" autocorrect="off" autocapitalize="none" maxlength="1">
-				<input class="mx-hybridapp-formgroup-input" type="password" autocorrect="off" autocapitalize="none" maxlength="1">
-			</div>
+                <div class="slider">
+                    <div class="slider-item">
+                        <img src="img/p1.png">
+                        <figcaption>
+                            <h3>Get in touch with us</h3>
+                            <p>This Menu helps you to easily navigate through the app. Get in touch with us by using „Contact” button. We’ll provide you with more information and answer any question you may have.</p>
+                        </figcaption>
+                    </div>
+                    <div class="slider-item">
+                        <img src="img/p2.png">
+                        <figcaption>
+                            <h3>Apply for trainings via the App</h3>
+                            <p>Stay up to date with local and international workshops and trainings. Apply for trainings or request further information directly from the app, at your convenience.</p>
+                        </figcaption>
+                    </div>
+                    <div class="slider-item">
+                        <img src="img/p3.png">
+                        <figcaption>
+                            <h3>Customized by your interests</h3>
+                            <p>Go to „My settings” and personalize the content of the app regarding your clinical and/or product interests. For a more customized experience.</p>
+                        </figcaption>
+                    </div>
+                    <div class="slider-item">
+                        <img src="img/p4.png">
+                        <figcaption>
+                            <h3>Content filtered by country</h3>
+                            <p>Use „Countries” filter to only see content relevant for the countries of your interest. Easily search for events and trainings in your surroundings.</p>
+                        </figcaption>
+                    </div>
+                    <div class="slider-item">
+                        <img src="img/p1.png">
+                        <figcaption>
+                            <h3>Get in touch with us</h3>
+                            <p>This Menu helps you to easily navigate through the app. Get in touch with us by using „Contact” button. We’ll provide you with more information and answer any question you may have.</p>
+                        </figcaption>
+                    </div>
+                </div>
+                <div class="loader"></div>
+            </div>
 
-			<button id="mx-confirm-pin" class="mx-hybridapp-button">Confirm</button>
-			<button id="mx-forgot-pin" class="mx-hybridapp-forget-button mx-hybridapp-link">Forgot my PIN</button>
-		</div>
-	</div>
+        </div>
+    </div>
 
-	<script src="cordova.js"></script>
-	<script type="text/javascript" src="../www/js/bundle.js"></script>
-</body>
+    <script src="cordova.js"></script>
+
+<script type="text/javascript" src="../www/js/bundle.js"></script></body>
 
 </html>

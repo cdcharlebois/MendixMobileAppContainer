@@ -1,10 +1,9 @@
 {
-  "url": "http://tieniber.ddns.net:8080/",
+  "url": "https://ultrasoundcee100-test.mendixcloud.com",
   "hybridTabletProfile": "",
   "hybridPhoneProfile": "",
   "enableOffline": true,
-  "persistentSession": {
-	  "enabled":true,
-	  "forceSecurity":true
-	}
+  "requirePin": false,
+  "username": "",
+  "password": ""
 }

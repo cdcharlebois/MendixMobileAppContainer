@@ -1,10 +1,9 @@
 {
-  "url": "http://tieniber.ddns.net:8080/",
+  "url": "https://SAP-Sphero-Game-MXSPHERO.cfapps.us10.hana.ondemand.com",
   "hybridTabletProfile": "",
   "hybridPhoneProfile": "",
-  "enableOffline": true,
-  "persistentSession": {
-	  "enabled":true,
-	  "forceSecurity":true
-	}
+  "enableOffline": false,
+  "requirePin": false,
+  "username": "",
+  "password": ""
 }

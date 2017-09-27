@@ -1,9 +1,9 @@
 {
-  "url": "https://ultrasoundcee100-test.mendixcloud.com",
-  "hybridTabletProfile": "",
-  "hybridPhoneProfile": "",
-  "enableOffline": true,
-  "requirePin": false,
-  "username": "",
-  "password": ""
+    "url": "https://ultrasoundcee100-test.mendixcloud.com",
+    "hybridTabletProfile": "",
+    "hybridPhoneProfile": "",
+    "enableOffline": true,
+    "requirePin": false,
+    "username": "",
+    "password": ""
 }

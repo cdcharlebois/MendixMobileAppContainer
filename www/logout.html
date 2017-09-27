@@ -12,10 +12,17 @@
 
 <body dir="ltr" class="mx-hybridapp">
     <div id="content">You have been logged out.</div>
+    <div id="return">Return to login</div>
 
 
     <script src="cordova.js"></script>
-    <script type="text/javascript" src="../www/js/bundle.js"></script>
+    <script>
+        (function() {
+            document.getElementById("return").addEventListener("touchend", function() {
+                window.location.href = window.location.href.split('logout').join('index')
+            });
+        })()
+    </script>
 </body>
 
 </html>

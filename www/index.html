@@ -79,7 +79,7 @@
                         var t = this;
                         this.session.logout(function() {
                             return t.data.clear(function() {
-                                return t.redirect('./logout.html');
+                                return t.redirect(t.homeUrl.split('index').join('logout'));
                             });
                         });
                     };

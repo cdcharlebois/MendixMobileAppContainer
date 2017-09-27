@@ -1,5 +1,6 @@
 {
-  "url": "https://ultrasoundcee100-test.mendixcloud.com",
+  // "url": "http://ultrasoundcee100-test.mendixcloud.com",
+  "url": "http://10.104.110.121:8080",
   "hybridTabletProfile": "",
   "hybridPhoneProfile": "",
   "enableOffline": true,

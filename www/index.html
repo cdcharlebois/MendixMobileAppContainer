@@ -73,13 +73,15 @@
     <script>
         // override logout behaviour.
         (function() {
+            var logoutPageName = "logout";
+
             function waitForElement() {
                 if ("undefined" !== typeof mx && mx.logout) {
                     mx.logout = function() {
                         var t = this;
                         this.session.logout(function() {
                             return t.data.clear(function() {
-                                return t.redirect(t.homeUrl.split('index').join('logout'));
+                                return t.redirect((/^file/).test(t.homeUrl) ? t.homeUrl.split("index").join(logoutPageName) : "/" + logoutPageName + ".html");
                             });
                         });
                     };

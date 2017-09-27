@@ -2,7 +2,7 @@
   "url": "http://10.104.110.121:8080",
   "hybridTabletProfile": "",
   "hybridPhoneProfile": "",
-  "enableOffline": true,
+  "enableOffline": false,
   "requirePin": false,
   "username": "",
   "password": ""

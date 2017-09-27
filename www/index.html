@@ -73,14 +73,22 @@
     <script>
         // override logout behaviour.
         (function() {
-            mx.logout = function() {
-                var t = this;
-                this.session.logout(function() {
-                    return t.data.clear(function() {
-                        return t.redirect('/logout.html');
-                    });
-                });
-            };
+            function waitForElement() {
+                if ("undefined" !== typeof mx && mx.logout) {
+                    mx.logout = function() {
+                        var t = this;
+                        this.session.logout(function() {
+                            return t.data.clear(function() {
+                                return t.redirect('./logout.html');
+                            });
+                        });
+                    };
+                } else {
+                    console.debug('waiting...')
+                    setTimeout(waitForElement, 250);
+                }
+            }
+            waitForElement();
         })();
     </script>
 </body>

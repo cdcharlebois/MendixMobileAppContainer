@@ -1,8 +1,8 @@
 {
-    "url": "http://10.104.111.188:8080",
+    "url": "https://ultrasoundcee100-test.mendixcloud.com",
     "hybridTabletProfile": "",
     "hybridPhoneProfile": "",
-    "enableOffline": false,
+    "enableOffline": true,
     "requirePin": false,
     "username": "",
     "password": ""
